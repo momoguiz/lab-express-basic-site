@@ -1,0 +1,189 @@
+@media (min-width:31.25rem){
+    .description span{
+        font-size: initial
+    }
+}
+
+html, body {
+    margin: 1px;
+    padding: 1px;
+  }
+  
+  body {
+    font-family: "Roboto";
+    font-size: 10px;
+    line-height: 3.5em;
+    font-weight: 300;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Condensed"
+  }
+  
+  h1 {
+    font-size: 9em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  h2 {
+    font-size: 5em;
+    text-align:end;
+    text-transform: uppercase;
+    color: rgb(101, 28, 248);
+    text-shadow: #020819 8px -20px 9px;
+  }
+  h3 {
+    font-size: 3em;
+    text-align:left;
+    text-transform: uppercase;
+    text-shadow: #020819 8px -20px 4px;
+  }
+
+  .nav-bar {
+    background-color: rgb(25, 33, 41);
+    padding: 25px;
+    margin: 1px;
+    align-items: center;
+  }
+  .nav-bar a {
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .header_works{
+    background-image: url('km15.JPG');
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 650px;
+    padding-top: 50px;
+    position: relative;
+
+  }
+  .header_about{
+    background-image: url('kmbasket.JPG');
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 650px;
+    padding-top: 50px;
+    position: relative;
+
+  }
+
+
+  .header_home {
+    background-image: url('kmhome.JPG');
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 650px;
+    padding-top: 50px;
+    position: relative;
+  }
+  
+  p {
+    font-size: 2em;
+    font-weight: 100;
+    text-align: center;
+    margin: 20px 0;
+  }
+  aside {
+    font-size: 2.5em;
+    position: absolute;
+    left: 10%;
+    bottom: 100px;
+  }
+
+
+*{box-sizing:border-box}
+img{
+    max-width: 100%;
+}
+
+/*pour le saut de page, on cree une class que l'on met en display:none*/
+.target{
+       display: none
+    }
+
+/* englobe le slider */
+
+.cadre_diapo{
+            max-width: 600px;
+            margin: 2rem auto;
+            overflow: hidden;
+        }
+
+.interieur_diapo{
+    display: flex;
+    width: 400%;
+    transition: transform .6s ease-in-out
+}
+
+.description{
+    position: relative;
+}
+
+.description span{
+            position: absolute;
+            left: 0;
+            top: 2%;
+            font-size: 75%;
+            display: flex;
+            padding: .5rem;
+            justify-content: center;
+            color: white;
+            background: hsla(0,0%,0%,.35)
+        }
+
+#votre_id1:target ~ .cadre_diapo .interieur_diapo{
+            transform:translatex(0)
+        }/*image 1*/
+
+#votre_id2:target ~ .cadre_diapo .interieur_diapo{
+    transform:translatex(-25%)
+}
+
+#votre_id3:target ~ .cadre_diapo .interieur_diapo{
+    transform:translatex(-50%)
+}
+
+#votre_id4:target ~ .cadre_diapo .interieur_diapo{
+    transform:translatex(-75%)
+}
+
+/*navigation avec images miniatures*/
+.navigation_diapo{
+    display: flex; /*permet d'aligner les photos les unes à la suite des autres, on peut aussi utiliser le positionnement absolu*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+.navigation_diapo li {
+    padding: .25rem;
+}
+
+.navigation_diapo img{
+    border: 3px solid white;
+    box-shadow:0 0 5px hsla(0,0%,0%,.4);
+}
+
+
+ul {
+    padding:0;
+    margin:0;
+    list-style-type:none;
+    }
+   li {
+    margin-left:2px;
+    float:left; /*pour IE*/
+    }
+ul li a {
+
+    text-decoration:none;
+    text-align:center;
+    padding:5px;
+    /* border:2px solid; */
+}
